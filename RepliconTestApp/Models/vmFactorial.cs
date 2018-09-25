@@ -11,14 +11,14 @@ namespace RepliconTestApp.Models
         public string IterationStr { get; set; }
         public string errorMsg { get; set; }
 
-        public int recursionFactorial(int number)
+        public Int64 recursionFactorial(int number)
         {
             if (number == 0)
                 return 1;
             return number * recursionFactorial(number - 1);
 
         }
-        public int Iterationfactorial(int n)
+        public Int64 Iterationfactorial(int n)
         {
             int res = 1, i;
 
