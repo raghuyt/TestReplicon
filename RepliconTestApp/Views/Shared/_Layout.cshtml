@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="/Content/Site.css?1.5" rel="stylesheet" />
+</head>
+<body>
+    <nav Class="navbar navbar-default navbar-dark bg-warning" id="layout_header">
+        <div Class="container-fluid">
+            <div Class="row">
+                <div Class="col-md-3 col-lg-2" style="padding-top:8px;"></div>
+                <div Class="col-md-6 col-lg-8 text-md-center p-t-3"><h4 id="app_name">Test App</h4></div>
+                <div class="col-md-3 col-lg-2 hidden-sm-down" style="padding-top:10px;"></div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-faded">
+        <div class="container-fluid">
+            <button class="navbar-toggler hidden-md-up pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+                &#9776;
+            </button>
+            <div Class="nav navbar-nav collapse navbar-toggleable-sm" id="CollapsingNavbar">
+                <a Class="nav-item nav-link active" href="/Home/Index">
+                    Welcome
+                </a>
+                <a Class="nav-item nav-link" href="/Home/One">
+                    Statement One
+                </a>
+                <a Class="nav-item nav-link" href="/Home/Two">
+                    Statement Two
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div Class="container-fluid p-a-1" id="middle_container">
+        @RenderBody();
+    </div>
+    <footer class="footer bg-warning" id="footer_nav">
+        <div class="container text-md-center">
+            <small class="" id="footer_text">
+                © Copyright . All Rights Reserved.
+            </small>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

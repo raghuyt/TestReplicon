@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Two";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" id="layoutEmpty_container">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-md-offset-3">
+        <div class="card">
+            <div class="card-header bg-info text-md-center" style="color:white;">
+                <strong> Factorial </strong>
+            </div>
+            <div Class="card-block">
+                <div Class="form-group row">
+                    <Label for="txtno" class="col-md-4 text-md-right">Enter Number:</Label>
+                    <div Class="col-md-8">
+                        <input class="form-control" id="txtno" name="txtno" type="text" value="" />
+                    </div>
+                </div>
+                <div Class="form-group row text-md-center">
+                    <label id="error_msg" Class="text-danger col-md-12">
+                    </label>
+                </div>
+            </div>
+            <div Class="card-footer text-md-center">
+                <input type="button" class="btn btn-success" id="btnFactorial" value="Factorial" />
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-10 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-md-offset-3" id="outputTab" style="display:none">
+        <div class="card">
+            <div class="card-header bg-info text-md-center" style="color:white;">
+                <strong> OUTPUT </strong>
+            </div>
+            <div Class="card-block">
+                <div Class="form-group row">
+                    <Label id="lblRecursion" class="col-md-12 text-md-center text-success">Recursion</Label>
+                    <Label id="lblRecursionVal" class="col-md-12 text-md-center"></Label>
+                </div>
+                <div Class="form-group row">
+                    <Label id="lblIteration" class="col-md-12 text-md-center text-success">Iteration</Label>
+                    <Label id="lblIterationVal" class="col-md-12 text-md-center"></Label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section scripts {
+    <script src="~/JS/Two.js"></script>
+}
